@@ -1,7 +1,8 @@
-import React from "react";
+import React, { Suspense } from "react";
+import { BrowserRouter as Router } from "react-router-dom";
+import { Pages } from "core/utils/lazy-imports";
 import ReactDOM from "react-dom/client";
 
-import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
 import "./index.css";
@@ -12,7 +13,11 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
-    <App />
+    <Router>
+      <Suspense fallback={<div> ...loading </div>}>
+        <Pages.LazyApp />
+      </Suspense>
+    </Router>
   </React.StrictMode>
 );
 
