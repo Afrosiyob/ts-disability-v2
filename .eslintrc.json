@@ -166,7 +166,7 @@
       "error",
       {
         "selector": "interface",
-        "leadingUnderscore": "require",
+        // "leadingUnderscore": "require",
         "prefix": ["I"],
         "format": ["UPPER_CASE", "StrictPascalCase"]
       }
